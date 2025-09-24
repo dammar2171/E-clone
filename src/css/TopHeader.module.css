@@ -1,0 +1,10 @@
+.topHeaderLink a{
+  text-decoration: none;
+  font-size: 14px;
+  padding-right: 1.2rem;
+  color: white;
+}
+.socialMedia a{
+  color: white;
+  padding-right: 1.1rem;
+}
