@@ -11,7 +11,6 @@ function MainHeader() {
             <IoSearch size={22} />
           </button>
         </div>
-
         <div className="col-7">
           <nav className="navbar navbar-expand-lg navbar-dark bg-black p-0">
             <div className="collapse navbar-collapse show" id="mainNav">
@@ -110,8 +109,11 @@ function MainHeader() {
             <a href="#">
               <FaRegUser />
             </a>
-            <a href="#">
+            <a href="#" className="position-relative">
               <LuShoppingBag />
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                1
+              </span>
             </a>
           </div>
         </div>

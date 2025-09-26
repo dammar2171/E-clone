@@ -1,0 +1,21 @@
+.card-title a{
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.PriceStockCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+ .PriceStockCard .price{
+  font-size: 0.9rem;
+  color: rgba(115, 114, 114, 0.783);
+ }
+
+ .PriceStockCard .stock{
+  font-size: 0.8rem;
+  color: rgb(8, 194, 8);
+ }

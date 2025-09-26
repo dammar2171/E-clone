@@ -2,6 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
+import Product from "./Pages/Product.jsx";
 import AboutUs from "./Pages/AboutUs.jsx";
 import OurTeam from "./Pages/OurTeam.jsx";
 import Shop from "./Pages/Shop.jsx";
@@ -11,6 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/about-Us" element={<AboutUs />} />
         <Route path="/our-Team" element={<OurTeam />} />
         <Route path="/shop" element={<Shop />} />
