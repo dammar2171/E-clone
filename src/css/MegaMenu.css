@@ -43,3 +43,8 @@
 .mainHeader-icon a{
   color: white;
 }
+.badge {
+    --bs-badge-padding-x: 0.35em !important;
+    --bs-badge-padding-y: 0.25em !important;
+    --bs-badge-font-size: 0.70em !important;
+}

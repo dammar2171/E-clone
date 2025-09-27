@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import "../css/MegaMenu.css";
 import { FaRegUser } from "react-icons/fa";
-import { LuShoppingBag } from "react-icons/lu";
+
+import CartOffCanvas from "./CartOffCanvas";
 function MainHeader() {
   return (
     <div className="container-fluid bg-black py-3 mainHeaderBorder">
@@ -34,9 +36,9 @@ function MainHeader() {
                     <div className="container">
                       <div className="row">
                         <div className="col-md-3">
-                          <a className="dropdown-item" href="#">
+                          <Link to={"/"} className="dropdown-item">
                             All E-Cigarette Kits
-                          </a>
+                          </Link>
                           <a className="dropdown-item" href="#">
                             Vape Mods
                           </a>
@@ -109,12 +111,7 @@ function MainHeader() {
             <a href="#">
               <FaRegUser />
             </a>
-            <a href="#" className="position-relative">
-              <LuShoppingBag />
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                1
-              </span>
-            </a>
+            <CartOffCanvas />
           </div>
         </div>
       </div>

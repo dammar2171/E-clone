@@ -1,29 +1,17 @@
 import React from "react";
 
-function ProductCrousal() {
+function ProductCrousal({ item }) {
   return (
     <div id="carouselExampleFade" className="carousel slide carousel-fade">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img
-            src="https://vape-reload.s3.us-east-1.amazonaws.com/products/1702e822-ad68-407a-a39a-d1a147b546e1.jpeg"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src={item.images.image1} className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img
-            src="https://vape-reload.s3.us-east-1.amazonaws.com/products/1702e822-ad68-407a-a39a-d1a147b546e1.jpeg"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src={item.images.image2} className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img
-            src="https://vape-reload.s3.us-east-1.amazonaws.com/products/1702e822-ad68-407a-a39a-d1a147b546e1.jpeg"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src={item.images.image3} className="d-block w-100" alt="..." />
         </div>
       </div>
       <button
