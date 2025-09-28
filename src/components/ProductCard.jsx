@@ -12,14 +12,14 @@ function ProductCard({ item }) {
       onClick={changePoductPage}
       style={{ width: "18rem", cursor: "pointer" }}
     >
-      <img src={item.image} className="card-img-top" alt="..." />
+      <img src={item.images.image1} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">
           <a href="#">{item.productName}</a>
         </h5>
         <div className="d-flex PriceStockCard">
-          <p className="card-text price">{item.price}</p>
-          <p className="card-text stock">{item.stock}</p>
+          <p className="card-text price">{item.paidPrice}</p>
+          <p className="card-text stock">{item.available}</p>
         </div>
         <div className="d-flex align-items-center gap-2 mb-3">
           <div

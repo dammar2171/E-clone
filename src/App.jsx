@@ -8,6 +8,7 @@ import AboutUs from "./Pages/AboutUs.jsx";
 import OurTeam from "./Pages/OurTeam.jsx";
 import Shop from "./Pages/Shop.jsx";
 import Services from "./Pages/Services.jsx";
+import Checkout from "./Pages/Checkout.jsx";
 function App() {
   return (
     <AppProvider>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/about-Us" element={<AboutUs />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/our-Team" element={<OurTeam />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/services" element={<Services />} />

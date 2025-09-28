@@ -3,20 +3,12 @@ import { AppContext } from "../store/Store";
 
 const CartCard = ({ item }) => {
   const [localQuantity, setLocalQuantity] = useState(item.quantity);
-  const {
-    updateCartItemQuantity,
-    deleteCartItemQuantity,
-    totalCostCartItem,
-    totalCost,
-  } = useContext(AppContext);
+  const { updateCartItemQuantity, deleteCartItemQuantity, totalCost } =
+    useContext(AppContext);
 
   useEffect(() => {
     updateCartItemQuantity(item.name, localQuantity);
   }, [localQuantity]);
-
-  useEffect(() => {
-    totalCostCartItem(parseInt(item.localQuantity), parseInt(item.paidPrice));
-  }, []);
 
   const addCartQuantity = () => {
     setLocalQuantity((prev) => prev + 1);

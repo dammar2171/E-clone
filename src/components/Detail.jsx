@@ -11,7 +11,13 @@ function Detail({ item }) {
   const handleCartButton = () => {
     const flavour = selectValue.current.value;
     setBagQuantity(quantity, flavour);
-    addToCart(item.productName, quantity, item.images.image1, flavour);
+    addToCart(
+      item.productName,
+      quantity,
+      item.images.image1,
+      flavour,
+      item.paidPrice
+    );
   };
   const addQuantity = () => {
     setQuantity(quantity + 1);

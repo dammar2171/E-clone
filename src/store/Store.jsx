@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const AppContext = createContext();
 
@@ -35,9 +35,10 @@ export const AppProvider = ({ children }) => {
   const [isOffCanvasAvailable, setIsOffCanvasAvailable] = useState(false);
   const [cartData, setCartData] = useState([]);
   const [totalCost, setTotalCost] = useState();
+  const [isOpenSearchBar, setIsOpenSearchBar] = useState(false);
 
-  const addToCart = (name, quantity, image, flavour) => {
-    const newItem = { name, quantity, image, flavour };
+  const addToCart = (name, quantity, image, flavour, paidPrice) => {
+    const newItem = { name, quantity, image, flavour, paidPrice };
     const newItemList = [...cartData, newItem];
     setCartData(newItemList);
     setBagQuantity((prev) => prev + quantity);
@@ -61,9 +62,14 @@ export const AppProvider = ({ children }) => {
     setCartData(newItemData);
   };
 
-  const totalCostCartItem = (quantity, price) => {
-    setTotalCost(quantity * price);
-  };
+  useEffect(() => {
+    const total = cartData.reduce(
+      (sum, item) => sum + item.quantity * parseFloat(item.paidPrice),
+      0
+    );
+    setTotalCost(total.toFixed(2));
+  }, [cartData]);
+
   return (
     <AppContext.Provider
       value={{
@@ -77,8 +83,9 @@ export const AppProvider = ({ children }) => {
         updateCartItemQuantity,
         detail,
         deleteCartItemQuantity,
-        totalCostCartItem,
         totalCost,
+        isOpenSearchBar,
+        setIsOpenSearchBar,
       }}
     >
       {children}

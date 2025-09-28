@@ -1,4 +1,4 @@
-import React from "react";
+import { useLocation } from "react-router-dom";
 import { LuShoppingBag } from "react-icons/lu";
 import { useContext } from "react";
 import { AppContext } from "../store/Store";
@@ -6,6 +6,8 @@ import CartCard from "./CartCard";
 import ProceedCheckout from "./ProceedCheckout";
 function CartOffCanvas() {
   const { bagQuantity, cartData } = useContext(AppContext);
+  const location = useLocation();
+  const hideBagIcon = location.pathname === "/checkout";
   return (
     <>
       <button
@@ -15,10 +17,14 @@ function CartOffCanvas() {
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
       >
-        <LuShoppingBag />
-        <span className=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          {bagQuantity}
-        </span>
+        {!hideBagIcon && (
+          <>
+            <LuShoppingBag />
+            <span className=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {bagQuantity}
+            </span>
+          </>
+        )}
       </button>
       <div
         className="offcanvas offcanvas-end"

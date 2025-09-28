@@ -2,14 +2,25 @@ import { Link } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import "../css/MegaMenu.css";
 import { FaRegUser } from "react-icons/fa";
-
 import CartOffCanvas from "./CartOffCanvas";
+import { useContext } from "react";
+import { AppContext } from "../store/Store";
+
 function MainHeader() {
+  const { setIsOpenSearchBar } = useContext(AppContext);
+
+  const onhandleSearchBar = () => {
+    setIsOpenSearchBar(true);
+  };
+
   return (
     <div className="container-fluid bg-black py-3 mainHeaderBorder">
       <div className="row align-items-center">
         <div className="col-2 d-flex justify-content-start">
-          <button className="btn btn-link text-white ps-2">
+          <button
+            onClick={onhandleSearchBar}
+            className="btn btn-link text-white ps-2"
+          >
             <IoSearch size={22} />
           </button>
         </div>

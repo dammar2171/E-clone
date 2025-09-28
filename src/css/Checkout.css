@@ -1,0 +1,94 @@
+.checkoutBackground{
+  background-color: whitesmoke;
+}
+
+.form-container button{
+  background-color: whitesmoke;
+  border: none;
+  font-size: 0.85rem;
+  color: rgb(116, 116, 116);
+}
+.form-container button:hover{
+  text-decoration: underline;
+}
+.form-container .form-inside{
+  margin-top: 0.65rem;
+  border-radius: 1rem;
+  background-color: #FFFF;
+  padding: 1rem;
+}
+#payment{
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.bottom-container{
+   margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: #FFFF;
+  padding: 1rem;
+}
+.cod {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.codDetail{
+  background-color: rgba(236, 238, 241, 0.555);
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+.codDetailText{
+  font-size: 0.75rem;
+}
+
+.deliveryCardContainer{
+  background-color: #FFFF;
+}
+
+.cardDetail {
+  display: flex;
+  justify-content: space-between;
+}
+.cardDetail span{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.applyDcard{
+  padding: 4px 16px;
+  border: none;
+  background-color: rgb(219, 235, 249);
+  color:rgb(100, 99, 99);
+  border-radius: 0.5rem;
+}
+.applyDcard:hover{
+  background-color: rgb(199, 225, 250);
+}
+.totalQn{
+  display: flex;
+  justify-content: space-between;
+}
+.totalQn span{
+  font-size: 0.9rem;
+  color: rgb(103, 101, 101);
+}
+.totalAmt{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.custumImportantLink{
+  display: flex;
+  background-color: whitesmoke;
+  gap: 0.1rem;
+}
+.custumImportantLink a{
+  font-size: 0.70rem;
+  text-decoration: none;
+  color: #6d6c6c;
+  margin-top: 1rem;
+  margin-left: 1.7rem;
+}
+.custumImportantLink a:hover{
+  text-decoration: underline;
+}
