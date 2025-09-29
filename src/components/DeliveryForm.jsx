@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function DeliveryForm() {
   const navigate = useNavigate();
   const onhandleGoBack = () => {
-    navigate("/product");
+    navigate("/");
   };
   return (
     <div className="form-container py-4">

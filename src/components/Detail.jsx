@@ -12,6 +12,7 @@ function Detail({ item }) {
     const flavour = selectValue.current.value;
     setBagQuantity(quantity, flavour);
     addToCart(
+      item.id,
       item.productName,
       quantity,
       item.images.image1,

@@ -29,6 +29,31 @@ export const AppProvider = ({ children }) => {
       availableOption: "1 of 1",
       available: "80",
     },
+    {
+      id: 2,
+      brandName: "/ elfbar-luxe-30000-1",
+      productName: "E-LFBAR Luxe 30000",
+      images: {
+        image1:
+          "https://elfbar.ae/cdn/shop/files/Bubble-Gum-Mint_700x700.jpg?v=1757039517",
+        image2:
+          "https://vapdazzle.ae/wp-content/uploads/2025/04/Elfbar-E-Shisha-Luxe-Bubble-Gum-Mint-30000-Puffs.jpg",
+        image3:
+          "https://vaps.ae/uploads/wp-content/Elfbar-E-Shisha-Luxe-Bubble-Gum-Mint-30000-Puffs.jpg",
+      },
+      originalPrice: "60.50",
+      paidPrice: "55.00",
+      savedPrice: "5.50",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      flavour: {
+        first: "mint",
+        second: "apple",
+        third: "banana",
+      },
+      availableOption: "1 of 1",
+      available: "90",
+    },
   ];
 
   const [bagQuantity, setBagQuantity] = useState(null);
@@ -37,8 +62,8 @@ export const AppProvider = ({ children }) => {
   const [totalCost, setTotalCost] = useState();
   const [isOpenSearchBar, setIsOpenSearchBar] = useState(false);
 
-  const addToCart = (name, quantity, image, flavour, paidPrice) => {
-    const newItem = { name, quantity, image, flavour, paidPrice };
+  const addToCart = (id, name, quantity, image, flavour, paidPrice) => {
+    const newItem = { id, name, quantity, image, flavour, paidPrice };
     const newItemList = [...cartData, newItem];
     setCartData(newItemList);
     setBagQuantity((prev) => prev + quantity);
@@ -57,8 +82,8 @@ export const AppProvider = ({ children }) => {
     setBagQuantity(totalQuantity);
   };
 
-  const deleteCartItemQuantity = (name) => {
-    const newItemData = cartData.filter((item) => item.name !== name);
+  const deleteCartItemQuantity = (id) => {
+    const newItemData = cartData.filter((item) => item.id !== id);
     setCartData(newItemData);
   };
 

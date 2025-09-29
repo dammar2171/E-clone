@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function ProductCard({ item }) {
   const navigate = useNavigate();
   const changePoductPage = (e) => {
-    navigate("/product");
+    navigate(`/product/${item.id}`);
   };
   return (
     <div

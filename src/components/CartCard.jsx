@@ -18,7 +18,7 @@ const CartCard = ({ item }) => {
     setLocalQuantity((prev) => (prev > 0 ? prev - 1 : 0));
   };
   const onHandleDeleteItem = () => {
-    deleteCartItemQuantity(item.name);
+    deleteCartItemQuantity(item.id);
   };
 
   return (

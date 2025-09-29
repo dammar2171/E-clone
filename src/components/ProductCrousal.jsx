@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProductCrousal({ item }) {
   return (
     <div id="carouselExampleFade" className="carousel slide carousel-fade">
