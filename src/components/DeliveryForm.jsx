@@ -89,7 +89,7 @@ function DeliveryForm() {
         </div>
         <button
           type="submit"
-          className="w-100 bg-black text-white rounded pt-1 pb-1 fs-5 fw-bold mt-4"
+          className="custom-completeBtn w-100 bg-black text-white rounded pt-1 pb-1 fs-5 fw-bold mt-4"
         >
           Complete Order
         </button>

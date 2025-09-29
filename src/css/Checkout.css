@@ -1,7 +1,9 @@
+/* Checkout page css */
 .checkoutBackground{
   background-color: whitesmoke;
 }
 
+/* DeliveryForm component  CSS */
 .form-container button{
   background-color: whitesmoke;
   border: none;
@@ -41,6 +43,7 @@
   font-size: 0.75rem;
 }
 
+/* DeliveryCard component CSS */
 .deliveryCardContainer{
   background-color: #FFFF;
 }
@@ -77,6 +80,8 @@
   font-size: 1.1rem;
   font-weight: 700;
 }
+
+/* ImptLink component css */
 .custumImportantLink{
   display: flex;
   background-color: whitesmoke;

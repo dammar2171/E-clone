@@ -5,7 +5,7 @@ function SearchModal() {
   const { setIsOpenSearchBar } = useContext(AppContext);
 
   return (
-    <div className="modal-dialog modal-lg mt-5">
+    <div className="modal-dialog modal-lg mt-4">
       <div className="modal-content">
         <div className="modal-header">
           <h1
@@ -31,7 +31,29 @@ function SearchModal() {
             type="search"
             placeholder="search for product,categories or description"
           />
-          
+          <div className="row mt-5">
+            <div className="col-12">
+              <span className="d-flex justify-content-center align-items-center searchIcon">
+                <IoSearch size={60} />
+              </span>
+            </div>
+            <div className="col-12 mt-5">
+              <h4 id="searchStartText">Start typing to search</h4>
+            </div>
+            <div className="col-12">
+              <p id="searchDescription">
+                Search for products by name, description, or category. We'll
+                show you the best matches instantly.
+              </p>
+            </div>
+            <div className="col-12">
+              <div className="threePoint">
+                <span>Categories</span>
+                <span>Products</span>
+                <span>Description</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
