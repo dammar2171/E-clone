@@ -1,14 +1,14 @@
 .mega-dropdown .dropdown-menu.mega-menu {
-  width: 105vw;
-  left: 50% !important;           
-  transform: translateX(-22%);    
-  top: 100%;
+  position: fixed;         /* Anchor to viewport */
+  top: 45px;               /* Adjust based on header height */
+  left: -260px;                 /* Start from left edge */
+  width: 100vw;            /* Full viewport width */
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 0;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  z-index: 1050;
+  padding: 2rem 3rem;
 }
 
 .mega-dropdown .dropdown-item {

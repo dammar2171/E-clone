@@ -3,9 +3,9 @@ import ProductCard from "./ProductCard";
 import { AppContext } from "../store/Store";
 
 function ProductCardList() {
-  const {detail}=useContext(AppContext);
+  const { detail } = useContext(AppContext);
   return (
-    <div className="product-list gap-4 d-flex">
+    <div className="product-list mx-4">
       {detail.map((item) => (
         <ProductCard key={item.id} item={item} />
       ))}

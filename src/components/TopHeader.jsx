@@ -4,7 +4,7 @@ import { FiFacebook } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 function TopHeader() {
   return (
-    <div className="container-fluid bg-black py-2">
+    <div className="container-fluid bg-black py-2 ">
       <div className="row">
         <div className="col-11">
           <div className={`${style.topHeaderLink} d-flex`}>

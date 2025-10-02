@@ -8,8 +8,7 @@ function ProceedCheckout() {
   const navigate = useNavigate();
 
   const onHandleCheck = (e) => {
-    const checkValue = e.target.checked;
-    setIsChecked(true);
+    setIsChecked(e.target.checked);
   };
 
   const onHandleProceedClicked = () => {
@@ -17,18 +16,22 @@ function ProceedCheckout() {
       navigate("/checkout");
     }
   };
+
   return (
     <div className="container-fluid py-2 cartButtom">
       <div className="totalPrice">
         <span>Total:</span>
-        <span>{totalCost}</span>
+        <span>AED {totalCost}</span>
       </div>
-      <input type="checkbox" onChange={onHandleCheck} />
-      <span className="inputText">
-        I agree to the terms and conditions
-      </span>{" "}
+      <input type="checkbox" onChange={onHandleCheck} checked={isChecked} />
+      <span className="inputText"> I agree to the terms and conditions </span>
       <br />
-      <button onClick={onHandleProceedClicked}>Proceed to Checkout</button>
+      <button
+        onClick={onHandleProceedClicked}
+        disabled={!isChecked || bagQuantity === 0}
+      >
+        Proceed to Checkout
+      </button>
     </div>
   );
 }

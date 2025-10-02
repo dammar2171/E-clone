@@ -1,12 +1,9 @@
-import MainHeader from "../components/MainHeader";
+import Header from "../components/Header";
 import ProductDetail from "../components/ProductDetail";
-import TopHeader from "../components/TopHeader";
-
 const Product = () => {
   return (
     <>
-      <TopHeader />
-      <MainHeader />
+      <Header />
       <ProductDetail />
     </>
   );

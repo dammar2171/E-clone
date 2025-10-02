@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap');
 
 *{
+  margin: 0;
+  padding: 0;
    font-family: "Inter", sans-serif;
 }
 html {
   overflow-y: scroll; /* Always show a vertical scrollbar */
+}
+body{
+  overflow: hidden;
 }
 body:not(.offcanvas-open) {
   padding-right: 0 !important;
@@ -139,4 +144,19 @@ body:not(.offcanvas-open) {
   height: 2.5rem;
   border-radius: 0.5rem;
   padding: 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgb(90, 88, 88);
+}
+.filterOption option{
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgb(90, 88, 88);
+}
+
+.custum-header{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }

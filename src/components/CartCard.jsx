@@ -3,11 +3,15 @@ import { AppContext } from "../store/Store";
 
 const CartCard = ({ item }) => {
   const [localQuantity, setLocalQuantity] = useState(item.quantity);
-  const { updateCartItemQuantity, deleteCartItemQuantity, totalCost } =
+  const { updateCartItemQuantity, deleteCartItemQuantity } =
     useContext(AppContext);
 
   useEffect(() => {
-    updateCartItemQuantity(item.name, localQuantity);
+    if (localQuantity > 0) {
+      updateCartItemQuantity(item.id, localQuantity);
+    } else {
+      deleteCartItemQuantity(item.id);
+    }
   }, [localQuantity]);
 
   const addCartQuantity = () => {
@@ -17,6 +21,7 @@ const CartCard = ({ item }) => {
   const subCartQuantity = () => {
     setLocalQuantity((prev) => (prev > 0 ? prev - 1 : 0));
   };
+
   const onHandleDeleteItem = () => {
     deleteCartItemQuantity(item.id);
   };
@@ -34,9 +39,14 @@ const CartCard = ({ item }) => {
             <span>{localQuantity}</span>
             <button onClick={subCartQuantity}>-</button>
           </div>
-          <div className="d-flex delTotal">
-            <span className="cartTotal">AED {totalCost}</span>
-            <span className="cartDelete" onClick={onHandleDeleteItem}>
+          <div className="d-flex delTotal justify-content-between">
+            <span className="cartTotal">
+              AED {(localQuantity * parseFloat(item.paidPrice)).toFixed(2)}
+            </span>
+            <span
+              className="cartDelete text-danger"
+              onClick={onHandleDeleteItem}
+            >
               Delete
             </span>
           </div>

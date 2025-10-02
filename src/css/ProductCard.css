@@ -154,3 +154,21 @@
  .cartButtom button:hover{
   background-color: rgb(164, 146, 252);
  }
+
+ .product-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr); 
+}
+
+@media (min-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

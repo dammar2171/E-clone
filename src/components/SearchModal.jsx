@@ -5,7 +5,7 @@ function SearchModal() {
   const { setIsOpenSearchBar } = useContext(AppContext);
 
   return (
-    <div className="modal-dialog modal-lg mt-4">
+    <div className="modal-dialog modal-lg  mb-5">
       <div className="modal-content">
         <div className="modal-header">
           <h1

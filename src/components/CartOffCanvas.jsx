@@ -4,28 +4,31 @@ import { useContext } from "react";
 import { AppContext } from "../store/Store";
 import CartCard from "./CartCard";
 import ProceedCheckout from "./ProceedCheckout";
+
 function CartOffCanvas() {
   const { bagQuantity, cartData } = useContext(AppContext);
   const location = useLocation();
   const hideBagIcon = location.pathname === "/checkout";
+
   return (
     <>
-      <button
-        className="position-relative bg-black text-white border-0"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight"
-        aria-controls="offcanvasRight"
-      >
-        {!hideBagIcon && (
-          <>
-            <LuShoppingBag />
-            <span className=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      {!hideBagIcon && (
+        <button
+          className="position-relative bg-black text-white border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <LuShoppingBag />
+          {bagQuantity > 0 && (
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {bagQuantity}
             </span>
-          </>
-        )}
-      </button>
+          )}
+        </button>
+      )}
+
       <div
         className="offcanvas offcanvas-end"
         tabIndex={-1}
@@ -48,7 +51,7 @@ function CartOffCanvas() {
           {cartData.length === 0 ? (
             <p className="text-center">Your cart is empty.</p>
           ) : (
-            cartData.map((item, index) => <CartCard key={index} item={item} />)
+            cartData.map((item) => <CartCard key={item.id} item={item} />)
           )}
           <hr />
           {cartData.length > 0 && <ProceedCheckout />}
